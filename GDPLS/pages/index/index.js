@@ -51,7 +51,6 @@ Page({
   },
   onShow: function() {
     app.getLocation(() => this.setData({ location: app.globalData.area }));
-    console.log("fuck");
   },
   switchTab1: function(){
     this.setData({

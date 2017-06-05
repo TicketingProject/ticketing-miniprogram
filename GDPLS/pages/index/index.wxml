@@ -37,10 +37,8 @@
         <image id="image" src="{{item.img}}"></image>
       </view>
       <view class="HolyGrail-content box">
-        <view class="row" style="display:flex;flex-wrap: wrap;height: 30px;">
-          <text class="row" id="title">{{item.nm}}</text>
-          <text class="row" id="original_title">{{item.scm}}</text>
-        </view>
+        <text class="row" id="title">{{item.nm}}</text>
+        <text class="row" id="original_title">{{item.scm}}</text>
         <text class="row" id="genres">{{item.cat}}</text>
         <text class="row" id="casts">{{item.star}}</text>
       </view>

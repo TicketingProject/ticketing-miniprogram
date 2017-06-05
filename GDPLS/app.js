@@ -11,6 +11,8 @@ App({
       wx.getLocation({
         type: 'wgs84',
         success: function (res) {
+          that.globalData.latitude = res.latitude;
+          that.globalData.longtitude = res.longitude;
           wx.request({
             url: 'https://movie.kaocat.com/api/area/' + res.latitude + "/" + res.longitude,
             method: 'GET',
@@ -54,6 +56,8 @@ App({
   globalData:{
     userInfo: null,
     area: null,
-    location: null
+    location: null,
+    latitude: null,
+    longitude: null
   }
 })
