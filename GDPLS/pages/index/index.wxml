@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="location" bindtap="selectLocation">
-  <text class="locName">{{location ? location.nm : "定位中..."}}</text>
+  <text class="locName">{{location ? location.nm : ""}}</text>
   <view class="triange" hidden="{{!location}}"></view>
 </view>
 <view class="top-tab flex-tab">

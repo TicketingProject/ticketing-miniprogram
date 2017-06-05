@@ -1,2 +1,11 @@
 <!--location.wxml-->
-<text>location.wxml</text>
+<view class="content">
+  <view class="title">定位区域</view>
+  <view class="area">
+    <view class="select">{{location ? location.nm : "定位中..."}}</view>
+  </view>
+</view>
+<view>
+  <view class="title">选择区域</view>
+  <view class="area"></view>
+</view>
