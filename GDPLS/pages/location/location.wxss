@@ -13,13 +13,13 @@ button {
 .area {
   flex-wrap:wrap;
   margin:0 auto;
-  width:360px;
+  width: 340px;
 }
 
 .select {
   display:inline-block;
   padding:5px 20px 5px 20px;
-  margin:15px 17px 15px 30px;
+  margin:15px 15px 15px 15px;
   border:1px solid #E6E6E6;
   font-size:12px;
 }

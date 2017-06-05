@@ -6,8 +6,8 @@
     <image bindtap="turnToTrailer" id="mainImg" src="{{detail.img}}"></image>
     <view class="movie-content box">
       <text>{{detail.nm}}</text>
-      <text style="font-size:20rpx;">评分</text>
-      <view class="fd-num">{{detail.sc}}</view>
+      <text style="font-size:20rpx;">{{detail.sc==0 ? "想看" : "评分"}}</text>
+      <view class="fd-num">{{detail.sc==0 ? detail.wish : detail.sc}}</view>
       <view class="text-box">
         <view>{{detail.cat}}</view>
         <view>{{detail.ver}}</view>

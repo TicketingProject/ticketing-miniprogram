@@ -18,6 +18,7 @@ Page({
   },
   ComingMovieViewTap: function(e) {
     var index = parseInt(e.currentTarget.dataset.index);
+    console.log(index);
     wx.navigateTo({
       url: '../movie/movie?id=' + this.data.comingMoive[index].id
     })
@@ -35,7 +36,6 @@ Page({
     })
   },
   onLoad: function () {
-    app.getLocation(() => this.setData({ location: app.globalData.address }));
     var that = this;
     request({
       url: 'api/movie',
@@ -48,6 +48,10 @@ Page({
         });
       }
     });
+  },
+  onShow: function() {
+    app.getLocation(() => this.setData({ location: app.globalData.area }));
+    console.log("fuck");
   },
   switchTab1: function(){
     this.setData({

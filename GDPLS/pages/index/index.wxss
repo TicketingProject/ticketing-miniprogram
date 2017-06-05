@@ -64,7 +64,7 @@ page {
   padding-top: 5px;
   padding-bottom: 5px;
   border-bottom-style: solid;
-  border-bottom-color: gray;
+  border-bottom-color: rgb(222, 222, 222);
   border-bottom-width: 1px;
 }
 
@@ -85,7 +85,6 @@ page {
   display: flex;
   flex-wrap: wrap;
   padding-left: 10px;
-  padding-top: 5px;
 }
 
 .row{
@@ -128,7 +127,7 @@ page {
 
 #original_title {
   font-size: 12px;
-  color: darkgrey;
+  color: rgb(114, 114, 114);
   overflow:hidden;
   text-overflow:ellipsis;
   white-space:nowrap;

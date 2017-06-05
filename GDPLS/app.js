@@ -3,25 +3,28 @@ App({
   onLaunch: function () {
     //调用API从本地缓存中获取数据
     var that = this;
-    
   },
 
   getLocation: function(cb) {
     var that = this;
-    wx.getLocation({
-      type: 'wgs84',
-      success: function (res) {
-        wx.request({
-          url: 'https://movie.kaocat.com/api/area/' + res.latitude + "/" + res.longitude,
-          method: 'GET',
-          success: function (res) {
-            console.log(res.data.data);
-            that.globalData.address = res.data.data;
-            typeof cb == "function" && cb();
-          },
-        })
-      }
-    })
+    if (that.globalData.area == null) {
+      wx.getLocation({
+        type: 'wgs84',
+        success: function (res) {
+          wx.request({
+            url: 'https://movie.kaocat.com/api/area/' + res.latitude + "/" + res.longitude,
+            method: 'GET',
+            success: function (res) {
+              that.globalData.area = res.data.data;
+              that.globalData.location = res.data.data;
+              typeof cb == "function" && cb();
+            },
+          })
+        }
+      })
+    } else {
+      typeof cb == "function" && cb();
+    }
   },
 
   getUserInfo:function(cb){
@@ -45,11 +48,12 @@ App({
 
   setLocation: function(location) {
     var that = this;
-    that.globalData.address = location;
+    that.globalData.area = location;
   },
 
   globalData:{
     userInfo: null,
-    address: null
+    area: null,
+    location: null
   }
 })
