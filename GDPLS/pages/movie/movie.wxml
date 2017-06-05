@@ -1,0 +1,54 @@
+<!--movie.wxml-->
+<view class="movie-header">
+  <image class="movie-background" src="{{detail.img}}"></image>
+  <view class="movie-filter"></view>
+  <view class="movie-container">
+    <image bindtap="turnToTrailer" id="mainImg" src="{{detail.img}}"></image>
+    <view class="movie-content box">
+      <text>{{detail.nm}}</text>
+      <text style="font-size:20rpx;">评分</text>
+      <view class="fd-num">{{detail.sc}}</view>
+      <view class="text-box">
+        <view>{{detail.cat}}</view>
+        <view>{{detail.ver}}</view>
+        <view>{{detail.rt}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="fd-bd-intro">
+  <view class="{{hideIntro ? 'hide-text' : 'introduction'}}"><text>{{detail.dra}}</text></view>
+  <view bindtap="dealWithIntroduct" class="text-expander-button {{hideIntro ? 'icon-flipy' : ''}}">
+    <text class="icon">^</text>
+  </view>
+</view>
+
+<view class="fd-bd">
+    <view class="fd-bd-title">剧照</view>
+    <scroll-view class="fd-scroll-box" scroll-x="true">
+      <view class="fd-hot-box">
+        <block wx:for="{{photos}}" wx:key="*this">
+            <image src="{{item.src}}" data-src="{{item.src}}" class="fd-cut" bindtap="previewImage"></image>
+        </block>
+      </view>
+    </scroll-view>
+</view>
+
+<view class="fd-bd">
+    <view class="fd-bd-title">评论</view>
+</view>
+
+<block wx:for="{{comments}}" wx:key="*this">
+<view class="comments">
+  <view class="fd-username">
+    <image src="{{item.avatarurl}}" id="headphoto"></image>
+    <text style="margin-left: 15rpx;">{{item.nick}}</text>
+  </view>
+  <view class="fd-text">{{item.content}}</view>
+</view>
+</block>
+
+<view class="blank"></view>
+
+<button></button>
+<button id="buy">优惠购票</button>

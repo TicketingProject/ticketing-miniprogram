@@ -1,0 +1,178 @@
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: #f4f4f4;  
+  font-family:"Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+} 
+
+.movie-header {
+  height: 45vw;
+  width: 100%;
+  position: relative;
+  color: #FFFFFF;
+}
+
+.movie-background {
+  z-index: 0;
+  position: absolute;
+  filter: blur(.6rem);
+  -webkit-filter: blur(.6rem);
+  width: 100%;
+  height: 100%;
+}
+
+.movie-container {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  padding-left:10%;
+  padding-top:4%;
+}
+
+#mainImg {
+  width: 28%;
+  height: 100%;
+  float: left;
+}
+
+.movie-filter {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  background-color: #40454d;
+  opacity: .55;
+}
+
+.movie-content {
+  height:100%;
+  padding-left: 4vw;
+}
+.fd-num {
+    color: red;
+    font-size: larger;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-box {
+  font-size: 3.8vw;
+}
+
+#buy {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: red;
+  color: white;
+}
+
+.fd-bd {
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 2vw;
+}
+.fd-bd-intro {
+    text-align: justify;
+    line-height: 1.5;
+    color: #666;
+    font-size: 30rpx;
+    padding: 15rpx;
+    background-color: white;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 2vw;
+}
+
+.fd-bd-title {
+    color: #444;
+    padding: 15rpx;
+    font-size:4.5vw;
+}
+
+.comments {
+  padding: 15rpx;
+  line-height: 1.5;
+  color: #666;
+  font-size: 30rpx;
+  background-color: white;
+}
+
+.fd-username {
+  display: flex;
+  height: 50rpx;
+  padding-bottom: 15rpx;
+}
+
+#headphoto {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius:50px;
+}
+
+.fd-text {
+  margin-left:65rpx;
+  padding-bottom: 15rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.fd-scroll-box {
+  white-space: nowrap;
+  display: flex;
+}
+
+.fd-hot-box {
+  width: 100%;
+  height: 245rpx;
+  margin-right: 24rpx;
+  display: inline-block;
+}
+
+.fd-cut {
+  width:160px;
+  height:90px;
+  margin-right: 15rpx;
+}
+
+.blank {
+  height: 100rpx;
+}
+
+.introduction {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.text-expander-button {
+    color: #aaa;
+    text-align: center;
+    height: 5vw;
+}
+
+.icon {
+  font-size: 8vw;
+  line-height: 8vw;
+  display: inline;
+  vertical-align: middle;
+}
+
+/*垂直翻转*/
+.icon-flipy {
+  transform: scaleY(-1);
+}
+
+.hide-text {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}

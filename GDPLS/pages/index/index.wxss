@@ -1,0 +1,156 @@
+page {
+  font-family:"Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+} 
+
+.top-tab{
+  width: 100%;
+  height: 40px;
+  background: white;
+  color: black;
+  font-size: 12px;
+  line-height: 40px;
+  box-shadow: 0 1px 1px #bebebe;
+  margin: 0 0 8rpx 0;
+  z-index: 9999;
+}
+
+.center-tab {
+  width:75px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.flex-tab {
+  display: flex;
+  justify-content: center;
+}
+
+.locName {
+  font-size: 12px;
+  color: gray;
+}
+
+.triange {
+  border: 5px solid;
+  border-color: gray white white white;
+  width: 0px;
+  margin-top:5px;
+}
+
+.location {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding-left:10px;
+  padding-top:12px;
+}
+
+.active{
+  color: red;
+  border-bottom: solid 2px red;
+}
+
+#image {
+  width: 70px;
+  height: 100px;
+}
+
+.HolyGrail-body {
+  display: flex;
+  flex: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: gray;
+  border-bottom-width: 1px;
+}
+
+.HolyGrail-content {
+  flex: 1;
+}
+
+.HolyGrail-nav, .HolyGrail-ads {
+  flex: 0 0 12px;
+}
+
+.HolyGrail-nav {
+  /* 导航放到最左边 */
+  order: -1;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.row{
+  flex-basis: 100%;
+}
+
+#buy {
+  width: 50px;
+  height: 30px;
+  font-size: 12px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: red;
+  color: white;
+}
+
+#title {
+  font-size: 15px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  width:10vw;
+}
+
+#genres {
+  font-size: 12px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  width:10vw;
+}
+
+#casts {
+  font-size: 12px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  width:10vw;
+}
+
+#original_title {
+  font-size: 12px;
+  color: darkgrey;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  width:10vw;
+}
+
+#rating {
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left: 10px;
+  color: sandybrown;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  width:15vw;
+}
+
+#wish {
+  padding-top:20px;
+  padding-bottom:20px;
+  width: 21vw;
+  font-size: 10px;
+  color: sandybrown;
+}
+

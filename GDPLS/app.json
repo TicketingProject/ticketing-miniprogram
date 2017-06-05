@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cinema/cinema",
+    "pages/user/user",
+    "pages/movie/movie",
+    "pages/trailer/trailer",
+    "pages/location/location"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f00",
+    "navigationBarTitleText": "GDPLS电影",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#f00",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "电影",
+        "iconPath": "image/电影.png",
+        "selectedIconPath": "image/电影红.png"
+      },
+      {
+        "pagePath": "pages/cinema/cinema",
+        "text": "影院",
+        "iconPath": "image/影院.png",
+        "selectedIconPath": "image/影院红.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "iconPath": "image/我的.png",
+        "selectedIconPath": "image/我的红.png"
+      }
+    ]
+  }
+}

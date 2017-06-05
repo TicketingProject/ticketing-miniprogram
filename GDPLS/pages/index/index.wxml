@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="location" bindtap="selectLocation">
+  <text class="locName">{{location ? location.nm : "定位中..."}}</text>
+  <view class="triange" hidden="{{!location}}"></view>
+</view>
+<view class="top-tab flex-tab">
+  <view class="center-tab">
+    <view class="{{currentNavtab ? 'active' : ''}}" bindtap="switchTab1">热映</view>
+    <view class="{{currentNavtab ? '' : 'active'}}" bindtap="switchTab2">待映</view>
+  </view>
+</view>
+
+<scroll-view scroll-y="true"scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="ctnt0 placehold" hidden="{{!currentNavtab}}">
+    <block wx:for="{{hotMoive}}" wx:key="*this">
+    <view bindtap="HotMovieViewTap" data-index="{{index}}" class="HolyGrail-body">
+      <view class="HolyGrail-nav">
+        <image bindtap="turnToTrailer" id="image" src="{{item.img}}"></image>
+      </view>
+      <view class="HolyGrail-content box">
+        <view class="row" style="display:flex;flex-wrap: wrap;height: 30px;">
+          <view class="row" id="title"><text>{{item.nm}}</text></view>
+          <view class="row" id="original_title"><text>{{item.scm}}</text></view>
+        </view>
+        <view class="row" id="genres"><text>{{item.cat}}</text></view>
+        <view class="row" id="casts"><text>{{item.star}}</text></view>
+      </view>
+      <view class="HolyGrail-ads">
+        <view id="rating"><text>{{item.sc}}分</text></view>
+        <button id="buy">购票</button>
+      </view>
+    </view>
+  </block>
+  </view>
+  <view class="ctnt1 placehold" hidden="{{currentNavtab}}">
+    <block wx:for="{{comingMoive}}" data-index="{{index}}" wx:key="*this">
+    <view bindtap="ComingMovieViewTap" class="HolyGrail-body">
+      <view class="HolyGrail-nav">
+        <image id="image" src="{{item.img}}"></image>
+      </view>
+      <view class="HolyGrail-content box">
+        <view class="row" style="display:flex;flex-wrap: wrap;height: 30px;">
+          <text class="row" id="title">{{item.nm}}</text>
+          <text class="row" id="original_title">{{item.scm}}</text>
+        </view>
+        <text class="row" id="genres">{{item.cat}}</text>
+        <text class="row" id="casts">{{item.star}}</text>
+      </view>
+      <view class="HolyGrail-ads">
+        <view id="wish"><text>{{item.wish}}人想看</text></view>
+        <button id="buy">想看</button>
+      </view>
+    </view>
+  </block>
+  </view>
+</scroll-view>

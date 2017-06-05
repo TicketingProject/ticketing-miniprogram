@@ -1,2 +1,3 @@
 # ticketing-miniprogram
-这个放小程序
+
+这里实现了GDPLS电影的小程序
