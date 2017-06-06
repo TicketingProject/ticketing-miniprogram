@@ -1,2 +1,18 @@
 <!--cinema.wxml-->
+<block wx:for="{{cinema}}" wx:key="*this">
+<view class="box">
+  <view class="top-box">
+    <view class="title">{{item.nm}}</view>
+    <view class="price">
+      <view class="num">{{item.sellPrice}}</view>
+      <view class="show-text">元起</view>
+    </view>
+  </view>
+  <view class="mid-box">
+    <view class="addr">{{item.addr}}</view>
+    <view class="lenth">{{distance[index]}}m</view>
+  </view>
+  <view class="biaoqian">{{item.imax ? "IMAX":"实惠"}}</view>
+</view>
+</block>
 

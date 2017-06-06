@@ -27,6 +27,7 @@ Page({
     request({
       url: 'api/cinema/' + this.data.location.id + "/" + this.data.lat + "/" + this.data.lng,
       success: function (res) {
+        console.log(res);
         // 求距离
         var temp = res.map(item=>{
           // 转化为弧度制
@@ -36,7 +37,7 @@ Page({
           var radLon2 = that.data.lng * Math.PI / 180.0;
           // 地球半径：单位m
           var R = 6370996.81
-          return R * Math.acos(Math.cos(radLat1) * Math.cos(radLat2) * Math.cos(radLon1 - radLon2) + Math.sin(radLat1) * Math.sin(radLat2));
+          return Math.ceil(R * Math.acos(Math.cos(radLat1) * Math.cos(radLat2) * Math.cos(radLon1 - radLon2) + Math.sin(radLat1) * Math.sin(radLat2)));
         });
         that.setData({
           cinema: res,

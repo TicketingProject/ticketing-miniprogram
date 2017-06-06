@@ -1,1 +1,59 @@
 /*cinema.wxss*/
+.box {
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  padding: 2vw;
+  font-family:"Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+  margin-top: 2vw;
+}
+
+.top-box {
+  display: flex;
+  font-size: large;
+}
+
+.price {
+  color: red;
+  display: flex;
+  align-items: flex-end;
+}
+.num {
+  /*font-size: larger;*/
+}
+.show-text {
+  font-size: 3vw;
+}
+
+.title {
+  margin-right: 5vw;
+}
+
+.mid-box {
+  display: flex;
+  font-size: small;
+  margin-top: 1.5vw;
+  margin-bottom: 1.5vw;
+  justify-content:space-between;
+}
+
+.addr {
+  width: 80%;
+  overflow: scroll;
+  height: 5vw;
+}
+.lenth {
+  color: pink;
+  width: 15%;
+  text-align: right;
+  margin-right: 4vw;
+}
+
+.biaoqian {
+  width: 9vw;
+  height: auto;
+  font-size: small;
+  border: 3rpx solid green;
+  border-radius: 0.5vw;
+  text-align: center;
+}
+
