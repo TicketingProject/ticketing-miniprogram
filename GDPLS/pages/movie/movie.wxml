@@ -49,6 +49,4 @@
 </block>
 
 <view class="blank"></view>
-
-<button></button>
 <button id="buy">优惠购票</button>

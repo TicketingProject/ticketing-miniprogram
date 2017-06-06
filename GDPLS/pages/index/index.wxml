@@ -1,16 +1,19 @@
 <!--index.wxml-->
-<view class="location" bindtap="selectLocation">
-  <text class="locName">{{location ? location.nm : ""}}</text>
-  <view class="triange" hidden="{{!location}}"></view>
-</view>
-<view class="top-tab flex-tab">
-  <view class="center-tab">
-    <view class="{{currentNavtab ? 'active' : ''}}" bindtap="switchTab1">热映</view>
-    <view class="{{currentNavtab ? '' : 'active'}}" bindtap="switchTab2">待映</view>
+<view class="top">
+  <view class="location" bindtap="selectLocation">
+    <text class="locName">{{location ? location.nm : ""}}</text>
+    <view class="triange" hidden="{{!location}}"></view>
+  </view>
+  <view class="top-tab flex-tab">
+    <view class="center-tab">
+      <view class="{{currentNavtab ? 'active' : ''}}" bindtap="switchTab1">热映</view>
+      <view class="{{currentNavtab ? '' : 'active'}}" bindtap="switchTab2">待映</view>
+    </view>
   </view>
 </view>
+<view class="blank"></view>
 
-<scroll-view scroll-y="true"scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<view>
   <view class="ctnt0 placehold" hidden="{{!currentNavtab}}">
     <block wx:for="{{hotMoive}}" wx:key="*this">
     <view bindtap="HotMovieViewTap" data-index="{{index}}" class="HolyGrail-body">
@@ -25,7 +28,7 @@
       </view>
       <view class="HolyGrail-ads">
         <view id="rating"><text>{{item.sc}}分</text></view>
-        <button id="buy">购票</button>
+        <view id="buy">购票</view>
       </view>
     </view>
   </block>
@@ -49,4 +52,4 @@
     </view>
   </block>
   </view>
-</scroll-view>
+</view>
