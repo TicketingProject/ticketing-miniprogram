@@ -1,6 +1,14 @@
 <!--cinema.wxml-->
-<block wx:for="{{cinema}}" wx:key="*this">
-<view class="box">
+<view class="top">
+  <view class="location" bindtap="selectLocation">
+    <text class="locName">{{location ? location.nm : ""}}</text>
+    <view class="triange" hidden="{{!location}}"></view>
+  </view>
+  <input placeholder="找影院"/>
+</view>
+<view class="blank"></view>
+
+<view class="box" wx:for="{{cinema}}" wx:key="*this">
   <view class="top-box">
     <view class="title">{{item.nm}}</view>
     <view class="price">
@@ -10,9 +18,8 @@
   </view>
   <view class="mid-box">
     <view class="addr">{{item.addr}}</view>
-    <view class="lenth">{{distance[index]}}m</view>
+    <view class="lenth">{{distance[index]<1000 ? distance[index] + "m" : distance[index]/1000 + "km"}}</view>
   </view>
-  <view class="biaoqian">{{item.imax ? "IMAX":"实惠"}}</view>
+  <view class="label">{{item.imax ? "IMAX":"实惠"}}</view>
 </view>
-</block>
 

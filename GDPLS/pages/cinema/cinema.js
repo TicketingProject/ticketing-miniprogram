@@ -10,14 +10,17 @@ Page({
     lng: null,
     distance: []
   },
+  selectLocation: function () {
+    wx.navigateTo({
+      url: '../location/location'
+    })
+  },
   onShow: function () {
     app.getLocation(() => this.setData({
       location: app.globalData.area,
       lat: app.globalData.latitude,
       lng: app.globalData.longtitude
     }));
-  },
-  onLoad: function () {
     var that = this;
     app.getLocation(() => this.setData({
       location: app.globalData.area,
@@ -27,9 +30,8 @@ Page({
     request({
       url: 'api/cinema/' + this.data.location.id + "/" + this.data.lat + "/" + this.data.lng,
       success: function (res) {
-        console.log(res);
         // 求距离
-        var temp = res.map(item=>{
+        var temp = res.map(item => {
           // 转化为弧度制
           var radLat1 = item.lat * Math.PI / 180.0;
           var radLat2 = that.data.lat * Math.PI / 180.0;
