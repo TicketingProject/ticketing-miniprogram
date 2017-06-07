@@ -26,10 +26,10 @@
 <view class="fd-bd">
     <view class="fd-bd-title">剧照</view>
     <scroll-view class="fd-scroll-box" scroll-x="true">
-      <view class="fd-hot-box">
-        <block wx:for="{{photos}}" wx:key="*this">
+      <view class="fd-hot-box" wx:for="{{photos}}" wx:key="*this">
+        <!--<block wx:for="{{photos}}" wx:key="*this">-->
             <image src="{{item.src}}" data-src="{{item.src}}" class="fd-cut" bindtap="previewImage"></image>
-        </block>
+        <!--</block>-->
       </view>
     </scroll-view>
 </view>

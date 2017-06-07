@@ -125,20 +125,23 @@ page {
 
 .fd-scroll-box {
   white-space: nowrap;
-  display: flex;
+  padding-left: 2vw;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
 }
 
 .fd-hot-box {
-  width: 100%;
-  height: 245rpx;
-  margin-right: 24rpx;
   display: inline-block;
 }
 
 .fd-cut {
   width:160px;
   height:90px;
-  margin-right: 15rpx;
+  margin-right: 1.5vw;
 }
 
 .blank {
