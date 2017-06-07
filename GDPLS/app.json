@@ -5,7 +5,8 @@
     "pages/user/user",
     "pages/movie/movie",
     "pages/trailer/trailer",
-    "pages/location/location"
+    "pages/location/location",
+    "pages/session/session"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -18,7 +18,6 @@ Page({
   },
   ComingMovieViewTap: function(e) {
     var index = parseInt(e.currentTarget.dataset.index);
-    console.log(index);
     wx.navigateTo({
       url: '../movie/movie?id=' + this.data.comingMoive[index].id
     })

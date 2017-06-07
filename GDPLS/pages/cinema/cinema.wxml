@@ -8,7 +8,7 @@
 </view>
 <view class="blank"></view>
 
-<view class="box" wx:for="{{cinema}}" wx:key="*this">
+<view class="box" wx:for="{{cinema}}" wx:key="*this" bindtap="selectSession" data-index="{{index}}">
   <view class="top-box">
     <view class="title">{{item.nm}}</view>
     <view class="price">

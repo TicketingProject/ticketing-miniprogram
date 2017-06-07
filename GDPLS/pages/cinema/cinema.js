@@ -15,6 +15,12 @@ Page({
       url: '../location/location'
     })
   },
+  selectSession: function(e) {
+    var index = parseInt(e.currentTarget.dataset.index);
+    wx.navigateTo({
+      url: '../session/session?id=' + this.data.cinema[index].id
+    })
+  },
   onShow: function () {
     app.getLocation(() => this.setData({
       location: app.globalData.area,
