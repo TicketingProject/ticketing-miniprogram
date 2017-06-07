@@ -38,8 +38,11 @@ Page({
           var radLon1 = item.lng * Math.PI / 180.0;
           var radLon2 = that.data.lng * Math.PI / 180.0;
           // 地球半径：单位m
-          var R = 6370996.81
-          return Math.ceil(R * Math.acos(Math.cos(radLat1) * Math.cos(radLat2) * Math.cos(radLon1 - radLon2) + Math.sin(radLat1) * Math.sin(radLat2)));
+          var R = 6370996.81;
+          var dis = Math.ceil(R * Math.acos(Math.cos(radLat1) * Math.cos(radLat2) * Math.cos(radLon1 - radLon2) + Math.sin(radLat1) * Math.sin(radLat2)));
+          if (dis>1000) dis = Math.floor(dis/100) * 100;
+          else if (dis>10000) dis = Math.floor(dis/10000) * 100000;
+          return dis;
         });
         that.setData({
           cinema: res,

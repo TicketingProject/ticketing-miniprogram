@@ -77,11 +77,12 @@ input {
   text-overflow:ellipsis;
   white-space:nowrap;
 }
+
 .lenth {
   color: pink;
   width: 15%;
   text-align: right;
-  margin-right: 4vw;
+  margin-right: 5%;
 }
 
 .label {

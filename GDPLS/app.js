@@ -53,6 +53,11 @@ App({
     that.globalData.area = location;
   },
 
+  resetLocation: function() {
+    var that = this;
+    that.globalData.area = that.globalData.location
+  },
+
   globalData:{
     userInfo: null,
     area: null,

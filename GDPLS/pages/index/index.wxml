@@ -15,8 +15,7 @@
 
 <view>
   <view class="ctnt0 placehold" hidden="{{!currentNavtab}}">
-    <block wx:for="{{hotMoive}}" wx:key="*this">
-    <view bindtap="HotMovieViewTap" data-index="{{index}}" class="HolyGrail-body">
+    <view wx:for="{{hotMoive}}" wx:key="*this" bindtap="HotMovieViewTap" data-index="{{index}}" class="HolyGrail-body">
       <view class="HolyGrail-nav">
         <image bindtap="turnToTrailer" id="image" src="{{item.img}}"></image>
       </view>
@@ -31,11 +30,9 @@
         <view id="buy">购票</view>
       </view>
     </view>
-  </block>
   </view>
   <view class="ctnt1 placehold" hidden="{{currentNavtab}}">
-    <block wx:for="{{comingMoive}}" wx:key="*this">
-    <view bindtap="ComingMovieViewTap" class="HolyGrail-body"  data-index="{{index}}">
+    <view wx:for="{{comingMoive}}" wx:key="*this" bindtap="ComingMovieViewTap" class="HolyGrail-body"  data-index="{{index}}">
       <view class="HolyGrail-nav">
         <image id="image" src="{{item.img}}"></image>
       </view>
@@ -50,6 +47,5 @@
         <button id="buy">想看</button>
       </view>
     </view>
-  </block>
   </view>
 </view>

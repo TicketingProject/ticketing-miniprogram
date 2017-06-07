@@ -9,8 +9,13 @@ Page({
   },
   selectLoc: function (e) {
     var index = parseInt(e.currentTarget.dataset.index);
-    console.log(index);
     app.setLocation(this.data.area[index]);
+    wx.navigateBack({
+      delta: 1
+    })
+  },
+  resetLoc: function(e) {
+    app.resetLocation();
     wx.navigateBack({
       delta: 1
     })
