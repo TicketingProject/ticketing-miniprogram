@@ -49,6 +49,11 @@ input {
   margin-bottom: 2vw;
 }
 
+.top-box {
+  display: flex;
+  align-items: flex-end;
+}
+
 .price {
   color: red;
   display: flex;
@@ -85,6 +90,10 @@ input {
   margin-right: 5%;
 }
 
+.down-box {
+  display: flex;
+}
+
 .label {
   width: 9vw;
   height: auto;
@@ -92,6 +101,7 @@ input {
   border: 3rpx solid green;
   border-radius: 0.5vw;
   text-align: center;
+  margin-right: 1.5vw;
 }
 
 

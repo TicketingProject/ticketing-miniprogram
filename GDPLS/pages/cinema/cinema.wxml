@@ -20,6 +20,10 @@
     <view class="addr">{{item.addr}}</view>
     <view class="lenth">{{distance[index]<1000 ? distance[index] + "m" : distance[index]/1000 + "km"}}</view>
   </view>
-  <view class="label">{{item.imax ? "IMAX":"实惠"}}</view>
+  <view class="down-box">
+    <view class="label" hidden="{{item.sellPrice >30}}">实惠</view>
+    <view class="label" hidden="{{!item.imax}}">IMAX</view>
+  </view>
+  
 </view>
 
